@@ -1,0 +1,10 @@
+<% if @order.line_items.any? %>
+<div>
+  <p><strong>Email:</strong> <%= @order.email %></p>
+  <p><strong>Total Charge:</strong> <%= humanized_money_with_symbol(@order.subtotal) %></p>
+</div>
+<% else %>
+<div>
+  <p>You have not made a purchase yet... but we can change that</p>
+</div>
+<% end %>

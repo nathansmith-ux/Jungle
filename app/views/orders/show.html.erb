@@ -2,12 +2,16 @@
 
   <header class="page-header">
     <h1>Order #<%= @order.id %></h1>
+    <p>Here in the Jungle, we strive for perfection so if you at any time have any issues please contact us with your order number and email</p>
   </header>
 
   <div class="order-summary jumbotron">
     <h4>Thank you for your order!</h4>
+    <%= render 'item_total' %>
   </div>
 
-  <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>
+  <%= render 'line_item' %>
+
+  <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-danger' %>
 
 </section>
