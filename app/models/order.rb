@@ -6,4 +6,10 @@ class Order < ApplicationRecord
 
   validates :stripe_charge_id, presence: true
 
+  def subtotal
+    line_items.sum do |item|
+      item.quantity * item.product.price
+    end
+  end
+
 end
