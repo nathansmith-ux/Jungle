@@ -1,2 +1,19 @@
-<h1>Admin::Dashboard#show</h1>
-<p>Find me in app/views/admin/dashboard/show.html.erb</p>
+<section class="mb-5 mt-3">
+  <h1>Hello My Fellow Admin!</h1>
+</section>
+
+<main>
+  <div class="container text-center">
+    <div class="row">
+      <div class="col">
+        <p>There are <span class="text-success"> <%= @products %> </span> Products In The Database</p>
+      </div>
+      <div class="col">
+        <p>There are <span class="text-success"> <%= @categories %> </span> Categories In The Database</p>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex justify-content-center mt-5">
+  <%= link_to 'View All Products', admin_products_path, class: 'btn btn-danger' %>
+  </div>
+</main>
