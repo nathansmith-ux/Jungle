@@ -8,6 +8,6 @@ describe('Visit The Website', () => {
   });
 
   it("Views a product page", () => {
-    cy.get('img[alt="Scented Blade"]').click();
+    cy.get('img[alt="Specific Product Name"]').click();
   })
 })
